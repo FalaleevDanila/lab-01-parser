@@ -26,7 +26,8 @@ int main(){
         std::cout << "Input JSON array size is not 3\n";
         return 1;
     }
-    if (!(json[0].size() == json[1].size() && json[1].size() == json[2].size())) {
+    if (!(json[0].size() == json[1].size()
+    && json[1].size() == json[2].size())) {
         std::cout << "Input JSON nested array sizes are not equal\n";
         return 1;
     }
@@ -39,8 +40,7 @@ int main(){
                         {"ticker", json[0][i]},
                         {"id", json[1][i]},
                         {"description", json[2][i]},
-                }
-        );
+                });
     }
 
     newFile(way, outJson);
